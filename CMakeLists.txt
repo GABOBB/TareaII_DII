@@ -7,4 +7,6 @@ add_executable(TareaII_DII main.cpp
         LinkedList.cpp
         LinkedList.h
         BinarySearchTree.cpp
-        BinarySearchTree.h)
+        BinarySearchTree.h
+        SortingAlg.cpp
+        SortingAlg.h)
