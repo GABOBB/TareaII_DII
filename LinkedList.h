@@ -17,7 +17,7 @@ class LinkedList {
 
     LinkedList()=default;
     ~LinkedList()=default;
-    void getRandValues(int cuantiti);
+    void getRandValues(int cuantiti, bool c);
     void addHead(int value);
     void Print()const;
     void addSorted(int value);

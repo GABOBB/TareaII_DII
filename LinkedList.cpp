@@ -24,10 +24,17 @@ void LinkedList::Print() const {
     }
 }
 
-void LinkedList::getRandValues(int cuantiti) {
-    for (int i = 0; i < cuantiti; i++) {
-        int c = rand() % 100;
-        addHead(c);
+void LinkedList::getRandValues(int cuantiti,bool c) {
+    if(c) {
+        for (int i = 0; i < cuantiti; i++) {
+            int c = rand() % 100;
+            addSorted(c);
+        }
+    }else {
+        for (int i = 0; i < cuantiti; i++) {
+            int c = rand() % 100;
+            addHead(c);
+        }
     }
 }
 void LinkedList::addSorted(int value) {
