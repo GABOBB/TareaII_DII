@@ -20,7 +20,7 @@ class LinkedList {
     void getRandValues(int cuantiti);
     void addHead(int value);
     void Print()const;
-
+    void addSorted(int value);
 };
 
 

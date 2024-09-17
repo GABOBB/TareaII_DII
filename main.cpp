@@ -6,11 +6,23 @@
 #include "SortingAlg.h"
 
 int main() {
-    LinkedList* list = new LinkedList();
+    /*LinkedList* list = new LinkedList();
     list->getRandValues(50);
     list->Print();
-
+    */
+    LinkedList* list2 = new LinkedList();
+    list2->addSorted(5);
+    list2->addSorted(2);
+    list2->addSorted(55);
+    list2->addSorted(49);
+    list2->addSorted(49);
+    list2->addSorted(43);
+    std::cout <<"lista 2"<< std::endl;
+    list2->Print();
+/*
     SortingAlg *ALG = new SortingAlg();
+
+
 
     std::vector<int> X =  { 1 , 3 , 5 , 2 , 6 , 4};
     std::cout << "array unsorted: " << std::endl;
@@ -34,4 +46,5 @@ int main() {
     ALG->print(Z);
 
     return 0;
+*/
 }
