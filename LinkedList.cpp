@@ -18,8 +18,9 @@ void LinkedList::addHead(int value) {
 }
 void LinkedList::Print() const {
     LinkedNode *act = head;
-    for(int i = 1; i <= size; i++) {
-        std::cout << i << " : "<<act->data << std::endl;
+    int i = 1;
+    while(act != nullptr) {
+        std::cout << i++ << " : "<<act->data << std::endl;
         act = act->next;
     }
 }
@@ -63,32 +64,6 @@ void LinkedList::addSorted(int value) {
     }
     prev->next = newNode;
     size++;
-
-    /*
-    auto *newNode = new LinkedNode(value);
-    if(size < 1) {
-    std::cout << value <<" hola hola hola"<< std::endl;
-        head = newNode;
-    }else {
-        LinkedNode *past = nullptr;
-        LinkedNode *act = head;
-        for(int i = 0; i <= size-1; i++) {
-            std::cout << (value < act->data)<<"  "<<value<<" "<<act->data<<std::endl;
-            if(value < act->data) {
-                past = act;
-                act = act->next;
-            }else if(value >act->data) {
-                past->next = act->next;
-                delete act;
-                break;
-            } else {
-                std::cout << "dicho valor ya se encunetra en la lista por lo que no se agrega" << std::endl;
-                break;
-            }
-        }
-    }
-    size++;
-*/
 }
 
 

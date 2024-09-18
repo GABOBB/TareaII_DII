@@ -4,10 +4,14 @@
 
 #ifndef BINARYSEARCHTREE_H
 #define BINARYSEARCHTREE_H
-struct BinaryNode {
+class BinaryNode {
+    public:
     BinaryNode *left;
     BinaryNode *right;
     int value;
+
+    BinaryNode(int value, BinaryNode *left = nullptr, BinaryNode *right = nullptr)
+        : left(left), right(right), value(value) {}
 };
 
 class BinarySearchTree {
@@ -15,11 +19,18 @@ class BinarySearchTree {
     int size;
 
     public:
-    BinarySearchTree();
-    ~BinarySearchTree();
+
+    BinarySearchTree():size(0),root(nullptr) {};
+
 
     void insert(int value);
-    void Print() const;
+    void Delete(int value);
+    BinaryNode* deleteNode(BinaryNode* node, int value);
+    BinaryNode* findMin(BinaryNode* node) const;
+
+
+    void Printaux(BinaryNode *node)const;
+    void Print()const;
 
 
 
