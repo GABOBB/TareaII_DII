@@ -1,8 +1,8 @@
 #include <iostream>
-#include "LinkedList.h"
-//#include "SortingAlg.h"
 #include <vector>
+#include <chrono>
 #include "BinarySearchTree.h"
+#include "LinkedList.h"
 #include "SortingAlg.h"
 
 
@@ -60,24 +60,33 @@ int main() {
     std::vector<int> X =  { 1 , 3 , 5 , 2 , 666 , 4};
     std::cout << "array unsorted: " << std::endl;
     ALG->print(X);
+    auto start = std::chrono::high_resolution_clock::now();
     X = ALG->BubbleSort(X);
-    std::cout << "\narray bubble sorted: " << std::endl;
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration = end - start;
+    std::cout << "\narray bubble sorted duration: "<<duration.count() << std::endl;
     ALG->print(X);
 
     //SelectionSort
     std::vector<int> Y =  { 1 , 4 , 2 , 5 , 666 , 3};
     std::cout << "\narray unsorted: " << std::endl;
     ALG->print(Y);
+    auto start1 = std::chrono::high_resolution_clock::now();
     Y = ALG->SelectionSort(Y);
-    std::cout << "\narray selection sorted: " << std::endl;
+    auto end1 = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration1 = end1 - start1;
+    std::cout << "\narray selection sorted duration: "<<duration1.count() << std::endl;
     ALG->print(Y);
 
     //MergeSort
     std::vector<int> Z =  {14 , 12 , 53 , 74 , 775 , 666};
     std::cout << "\narray unsorted: " << std::endl;
     ALG->print(Z);
+    auto start2 = std::chrono::high_resolution_clock::now();
     Z = ALG->MergeSort(Z);
-    std::cout << "\narray merge sorted: " << std::endl;
+    auto end2 = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration2 = end2 - start2;
+    std::cout << "\narray merge sorted duration: "<<duration2.count() << std::endl;
     ALG->print(Z);
 
 

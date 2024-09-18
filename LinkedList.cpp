@@ -3,7 +3,6 @@
 //
 
 #include "LinkedList.h"
-
 #include <iostream>
 
 void LinkedList::addHead(int value) {
